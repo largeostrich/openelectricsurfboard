@@ -1,0 +1,18 @@
+ROD=10;
+PLY=5;
+OFFSET=0;
+THICKNESS=4;
+difference(){
+    union(){
+        cube([ROD+4,ROD+4,THICKNESS],center=true);
+        translate([(ROD+PLY)/2,-OFFSET/2+2,0])
+            cube([PLY+4,ROD+OFFSET+8,THICKNESS],center=true);
+    };
+    union(){
+        cube([ROD,ROD,THICKNESS],center=true);
+        translate([(ROD+PLY)/2,-OFFSET/2+4,0])
+            cube([PLY,ROD+OFFSET+8,THICKNESS],center=true);
+        translate([2,6,0])
+            cube([ROD,ROD,THICKNESS],center=true);
+    };
+};
