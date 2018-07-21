@@ -1,0 +1,43 @@
+//T foil
+$fn=72;
+module tfoil(){
+    difference(){
+        union(){
+            hull(){
+                translate([0,0,0])
+                    rotate([0,90,0])
+                        cylinder(r=8,h=60,center=true);
+                translate([0,-6,0])
+                    rotate([0,90,0])
+                        cylinder(r=7,h=60,center=true);
+                translate([0,16,0])
+                    rotate([0,90,0])
+                        cylinder(r=7,h=60,center=true);
+                translate([0,-10,0])
+                    rotate([0,90,0])
+                        cylinder(r=6,h=60,center=true);
+                translate([5,50,0])
+                    rotate([0,90,0])
+                        cylinder(r=0.6,h=100,center=true);
+                translate([5,-20,0])
+                    rotate([0,90,0])
+                        cylinder(r=0.6,h=100,center=true);
+            };
+            hull(){
+                translate([0,-10,30])
+                    rotate([5,0,0])
+                        scale([1,4,1])
+                            cylinder(r=3,h=60,center=true);
+                translate([0,40,30])
+                    rotate([5,0,0])
+                        cylinder(r=0.6,h=60,center=true);
+            };
+            translate([2.4,5,80])
+                rotate([2.5,5,0])
+                    cube([6,70,50],center=true);
+        };
+        translate([0,0,-20])
+            cube([400,400,40],center=true);
+    };
+}
+tfoil();
