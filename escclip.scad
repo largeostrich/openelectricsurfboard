@@ -1,0 +1,50 @@
+$fn=36;
+module top(){
+    translate([22.5,18,28.75])
+        cube([40,4,2.5],center=true);
+    translate([22.5,-18,28.75])
+        cube([40,4,2.5],center=true);
+    translate([-22.5,18,28.75])
+        cube([40,4,2.5],center=true);
+    translate([-22.5,-18,28.75])
+        cube([40,4,2.5],center=true);
+    translate([0,0,22.5])
+        cube([5,40,15],center=true);
+    translate([-45,0,22.5])
+        cube([5,40,15],center=true);
+    translate([45,0,22.5])
+        cube([5,40,15],center=true);
+    translate([0,0,17.5])
+        cube([5,70,5],center=true);
+    translate([-45,0,17.5])
+        cube([5,70,5],center=true);
+    translate([45,0,17.5])
+        cube([5,70,5],center=true);
+    translate([0,30,17.5])
+        cylinder(r=6,h=5,center=true);
+    translate([-45,30,17.5])
+        cylinder(r=6,h=5,center=true);
+    translate([45,30,17.5])
+        cylinder(r=6,h=5,center=true);
+    translate([0,-30,17.5])
+        cylinder(r=6,h=5,center=true);
+    translate([-45,-30,17.5])
+        cylinder(r=6,h=5,center=true);
+    translate([45,-30,17.5])
+        cylinder(r=6,h=5,center=true);
+}
+difference(){
+    top();
+    translate([0,30,17.5])
+        cylinder(r=2,h=6,center=true);
+    translate([-45,30,17.5])
+        cylinder(r=2,h=6,center=true);
+    translate([45,30,17.5])
+        cylinder(r=2,h=6,center=true);
+    translate([0,-30,17.5])
+        cylinder(r=2,h=6,center=true);
+    translate([-45,-30,17.5])
+        cylinder(r=2,h=6,center=true);
+    translate([45,-30,17.5])
+        cylinder(r=2,h=6,center=true);
+};
